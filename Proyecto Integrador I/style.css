@@ -449,3 +449,18 @@ section {
   height: 100%;
   z-index: -1; /* atrás del contenido */
 }
+
+/* Hace que el mockup sea más grande dentro del grid */
+.card.big-mockup {
+  grid-column: span 2;  /* ocupa el doble de ancho que una tarjeta normal */
+}
+
+.card.big-mockup img {
+  width: 100%;
+  max-width: 900px; /* puedes ajustar este valor según quieras */
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+

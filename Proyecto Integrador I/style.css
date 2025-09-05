@@ -399,3 +399,27 @@ section{ max-width:1200px; margin:0 auto; padding:6rem 2rem; }
   .stat-badge{ font-size:.95rem; }
 }
 
+.mockup-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.mockup-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.mockup-gallery img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.mockup-gallery img:hover {
+  transform: scale(1.05);
+}
+

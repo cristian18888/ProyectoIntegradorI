@@ -427,4 +427,25 @@ section {
   section {
     padding: 4rem 1.2rem; /* UN POCO MENOS EN PANTALLAS PEQUEÑAS */
   }
+
+}
+
+/*mejora de animaciones*/
+
+.showcase {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.showcase:hover {
+  transform: rotateY(10deg) rotateX(5deg) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+#grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* atrás del contenido */
 }

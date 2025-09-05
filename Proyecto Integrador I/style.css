@@ -463,4 +463,18 @@ section {
   margin: 0 auto;
 }
 
+.card.big-mockup {
+  grid-column: span 2;  /* ocupa toda la fila */
+}
+
+.card.big-mockup img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
 

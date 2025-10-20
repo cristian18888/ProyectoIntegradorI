@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Integrador — Seguridad Adaptativa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ 
+  <canvas id="grid-bg" aria-hidden="true"></canvas>
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+<header class="site-header">
+  <div class="brand">Seguridad <span>Adaptativa</span></div>
+
+  
+  <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+
+  
+  <nav id="primary-nav" class="primary-nav">
+    <a href="#hero">Inicio</a>
+    <a href="#problema">Problema</a>
+    <a href="#metodologia">Metodología</a>
+    <a href="#regiones">Regiones</a>
+    <a href="#mockup-v1">Mockups</a>
+    <a href="#marco">Marco</a>
+    <a href="#analizador">Analizador</a>
+  </nav>
+</header>
+
+
+  <!-- =========================================================
+       HERO (chips + título + lead)
+       ========================================================= -->
+  <section id="hero" class="hero">
+    <div class="chips tags">
+      <span class="chip">🔐 Sandboxing dinámico</span>
+      <span class="chip">🐳 Docker</span>
+      <span class="chip">🤖 IA / ML antimalware</span>
+      <span class="chip">📋 NIST · OWASP</span>
+      <span class="chip">🧪 Demo interactiva</span>
+      <span class="chip">🛰️ GrapheneOS (inspiración)</span>
+    </div>
+
+    <h1>Marco de Seguridad y Buenas Prácticas Adaptativas</h1>
+    <p class="lead">
+      Prototipo mínimo viable para divulgar <strong>sandboxing con contenedores</strong>, IA y prácticas modernas frente a malware.
+    </p>
+  </section>
+
+  <!-- =========================================================
+       PROBLEMA (bloque único)
+       ========================================================= -->
+  <section id="problema" class="problem-only">
+    <h2 class="lined">Problema</h2>
+
+    <div class="problem-callout">
+      <p class="lead-problem">
+        Los antivirus tradicionales basados en <strong>firmas estáticas</strong> no
+        cubren de forma confiable el <em>malware moderno</em> (ofuscación, empaquetado,
+        variantes rápidas), ni técnicas <strong>fileless</strong> y <strong>evasion/anti-sandbox</strong>.
+      </p>
+
+      <ul class="problem-bullets">
+        <li>Limitaciones de firmas → alta latencia ante 0-day y variantes polimórficas.</li>
+        <li>Auge de <strong>malware sin archivos</strong>, <strong>LOLBins</strong> y abuso de scripting.</li>
+        <li>Más superficie en endpoints (navegadores, macros, supply chain).</li>
+        <li>Falsos positivos/negativos y <strong>complejidad de integración</strong> en Pymes.</li>
+        <li>Brecha de talento: monitoreo y respuesta <strong>costosos</strong> y poco reproducibles.</li>
+      </ul>
+
+      <p class="region-note">
+        En <strong>LatAm</strong> la base es menor pero con <strong>crecimiento de incidentes</strong> y preparación desigual:
+        urge un enfoque <strong>adaptativo y reproducible</strong> con <strong>sandboxing + Docker</strong> asistido por <strong>IA/ML</strong>.
+      </p>
+    </div>
+
+    <small class="problem-sources">
+      Fuentes: Grand View Research (2024), IDC/Fortinet (2024), World Bank (2024), Comparitech (2023, act. 2024).
+    </small>
+  </section>
+
+  <!-- =========================================================
+       REGIONES / 7 DE 10
+       ========================================================= -->
+  <section id="regiones" class="regional">
+    <h2>Comparación del mercado global por regiones</h2>
+
+    <div class="regional-grid">
+      <div class="regional-copy">
+        <div class="pill pct red">10%</div>
+        <p>
+          Latinoamérica representa ~<strong>9.7 %</strong> del gasto global en ciberseguridad (2024).
+          América del Sur es parte importante de este bloque, con crecimiento de incidentes y menor preparación.
+        </p>
+
+        <div class="pill pct blue">70%+</div>
+        <p>
+          EE.UU. y Europa Occidental concentran <strong>más del 70 %</strong> del gasto global en ciberseguridad.
+        </p>
+
+        <div class="pill pct violet">20%</div>
+        <p>
+          Asia–Pacífico ~<strong>14 %</strong>, MEA ~<strong>5–7 %</strong> y Oceanía ~<strong>3 %</strong> del total restante.
+        </p>
+
+        <hr class="soft">
+
+        <div class="victims">
+          <p class="kicker">Víctimas a nivel mundial</p>
+          <h3><strong>7 de cada 10</strong> empresas han sufrido algún ciberataque</h3>
+          <div class="people-meter" aria-label="7 de cada 10 empresas">
+            <span class="person filled"></span><span class="person filled"></span><span class="person filled"></span>
+            <span class="person filled"></span><span class="person filled"></span><span class="person filled"></span>
+            <span class="person filled"></span><span class="person"></span><span class="person"></span><span class="person"></span>
+          </div>
+        </div>
+
+        <footer class="regional-notes">
+          <small>Fuentes: Grand View Research (2024), IDC/Fortinet (2024), World Bank (2024), Comparitech (2023, act. 2024), Barracuda Networks (2024) cybernomics 101 Report (Ponemon) .</small>
+        </footer>
+      </div>
+
+      <figure class="regional-map">
+        <img src="img/mapamundi.png" alt="Mapa mundial para distribución regional">
+      </figure>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       DISEÑO: PROCESO (Design Thinking)
+       ========================================================= -->
+  <section id="metodologia" class="diagram">
+    <h2>
+      ¿Cómo se desarrollará la propuesta? <br>
+      Metodología (Design Thinking)
+    </h2>
+    <div class="diagram-flow">
+      <div class="step">
+        <div class="circle blue"><i class="fas fa-users"></i></div>
+        <h3>EMPATIZAR</h3>
+        <p>Identificar necesidades de usuarios y empresas frente a ataques ciberneticos .</p>
+      </div>
+
+      <div class="connector red"></div>
+
+      <div class="step">
+        <div class="circle red"><i class="fas fa-bullseye"></i></div>
+        <h3>DEFINIR</h3>
+        <p>Necesidades de usuarios y empresas frente a ataques avanzados.</p>
+      </div>
+
+      <div class="connector blue"></div>
+
+      <div class="step">
+        <div class="circle blue"><i class="fas fa-lightbulb"></i></div>
+        <h3>IDEAR</h3>
+        <p>Marcos de seguridad de <strong>sandboxing</strong> con Docker + IA como eje central.</p>
+      </div>
+
+      <div class="connector red"></div>
+
+      <div class="step">
+        <div class="circle red"><i class="fas fa-drafting-compass"></i></div>
+        <h3>PROTOTIPAR</h3>
+        <p>Simulaciones ilustrativas para expandir propuestas de seguridad y comunicar ideas clave.</p>
+      </div>
+
+      <div class="connector blue"></div>
+
+      <div class="step">
+        <div class="circle blue"><i class="fas fa-star"></i></div>
+        <h3>PROBAR</h3>
+        <p>Validación de contenidos para inspirar nuevas ideas y futuros proyectos de ciberseguridad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       OBJETIVOS (tarjetas)
+       ========================================================= -->
+  <section id="objetivos" class="objetivos-section">
+    <h2>Objetivos del Proyecto</h2>
+    <p class="subheading">Estas metas guían el enfoque del prototipo de seguridad adaptativa.</p>
+
+    <div class="objetivos-grid">
+      <div class="objetivo-card objetivo-general">
+        <div class="icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Objetivo General</h3>
+        <p>Analizar y documentar buenas prácticas adaptativas para la detección de malware mediante <strong>sandboxing con Docker</strong>.</p>
+      </div>
+
+      <div class="objetivo-card">
+        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Identificar debilidades</h3>
+        <p>Detectar limitaciones de los antivirus tradicionales frente a amenazas modernas.</p>
+      </div>
+
+      <div class="objetivo-card">
+        <div class="icon"><i class="fas fa-cogs"></i></div>
+        <h3>Formular un marco</h3>
+        <p>Proponer buenas prácticas académicas en ciberseguridad adaptativa.</p>
+      </div>
+
+      <div class="objetivo-card">
+        <div class="icon"><i class="fas fa-docker"></i></div>
+        <h3>Difundir soluciones</h3>
+        <p>Promover el uso de Docker e IA para crear entornos de análisis seguros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       DIAGRAMA EN LÍNEA (etapas)
+       ========================================================= -->
+  <section class="timeline">
+    <h2>DIAGRAMA de etapas en línea</h2>
+    <div class="timeline-container">
+      <div class="step">
+        <div class="circle">💡</div>
+        <h3>INVESTIGACIÓN</h3>
+        <p>Revisión de literatura (NIST, OWASP, papers de sandboxing y antivirus adaptativos). Análisis de necesidades con empresas.</p>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step">
+        <div class="circle">💬</div>
+        <h3>DIAGNÓSTICO</h3>
+        <p>Limitaciones de antivirus tradicionales y retos regionales (incidentes altos + baja infraestructura).</p>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step">
+        <div class="circle">🖥️</div>
+        <h3>DISEÑO</h3>
+        <p>Marco estructurado de desarrollo basado en contenedores Docker, IA y sandboxing.</p>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step">
+        <div class="circle">👥</div>
+        <h3>VALIDACIÓN</h3>
+        <p>Contraste con referentes (GrapheneOS, Cuckoo, CIS Controls) y opiniones de expertos.</p>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step">
+        <div class="circle">🏆</div>
+        <h3>DIVULGACIÓN</h3>
+        <p>Publicación del sitio interactivo para mostrar prácticas adaptativas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       DIAGRAMA COMPARATIVO
+       ========================================================= -->
+  <section id="comparativo" class="comparativo">
+    <h2>Diagrama comparativo de Sistemas de seguridad</h2>
+    <div class="comparativo-grid">
+      <div class="col">
+        <h3>Antivirus Tradicional</h3>
+        <ul>
+          <li>🔒 Basado en firmas → solo detecta amenazas conocidas.</li>
+          <li>⏳ Requiere actualizaciones constantes.</li>
+          <li>⚠️ Altos falsos negativos frente a malware avanzado.</li>
+          <li>🛡️ Protección reactiva → actúa después del ataque.</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h3>Sandboxing <span>+ IA</span></h3>
+        <ul>
+          <li>🧪 Análisis dinámico en entornos aislados.</li>
+          <li>📦 Contenedores (Docker) evitan comprometer el sistema real.</li>
+          <li>🤖 IA detecta comportamientos anómalos.</li>
+          <li>✨ Menos falsos positivos y mejor cobertura.</li>
+          <li>📈 Evolutivo → aprende con nuevas amenazas.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+<!-- =========================================================
+     ANALIZADOR TIPO VIRUSTOTAL (prototipo educativo)
+     ========================================================= -->
+<section id="analizador" class="vt-section">
+  <h2>Analizador de archivos (prototipo tipo VirusTotal)</h2>
+  <p class="vt-lead">
+    Sube un archivo de ejemplo para calcular su <strong>SHA-256</strong> y ver una
+    <strong>simulación educativa</strong> de resultados en múltiples motores.
+    <br class="br-hide-sm">No ejecutamos binarios ni enviamos datos a terceros; todo ocurre en tu navegador.
+  </p>
+
+  <!-- Zona de carga -->
+  <div id="dropzone" class="vt-dropzone" role="button" tabindex="0" aria-label="Arrastra y suelta un archivo o haz click para seleccionarlo">
+    <div class="vt-drop-cta">
+      <div class="vt-bigicon">📄</div>
+      <div>
+        <strong>Arrastra tu archivo aquí</strong> o <span class="linkish">haz click para seleccionarlo</span>
+        <div class="vt-accept">Extensiones típicas: .pdf, .docx, .zip, .apk, .exe, .js, .ps1</div>
+      </div>
+    </div>
+    <input id="fileInput" type="file" class="sr-only" />
+  </div>
+
+  <!-- Metadatos calculados -->
+  <div id="fileMeta" class="vt-card hidden" aria-live="polite">
+    <h3>Metadatos</h3>
+    <div class="vt-meta-grid">
+      <div><span>Nombre</span><strong id="metaName">—</strong></div>
+      <div><span>Tamaño</span><strong id="metaSize">—</strong></div>
+      <div><span>Tipo</span><strong id="metaType">—</strong></div>
+      <div><span>SHA-256</span><code id="metaSha">—</code></div>
+    </div>
+  </div>
+
+  <!-- Acciones -->
+  <div id="actions" class="vt-actions hidden">
+    <button id="scanBtn" class="btn primary"><i class="fas fa-play"></i> Analizar (simulación)</button>
+    <button id="resetBtn" class="btn ghost"><i class="fas fa-rotate"></i> Limpiar</button>
+    <small class="vt-note">
+      Este módulo es <strong>didáctico</strong>. No reemplaza análisis forense real ni servicios como VirusTotal.
+    </small>
+  </div>
+
+  <!-- Resultados -->
+  <div id="results" class="vt-results hidden">
+    <div class="vt-summary">
+      <div class="vt-kpi">
+        <div class="kpi-num" id="kpiDetections">0</div>
+        <div class="kpi-label">Detecciones</div>
+      </div>
+      <div class="vt-kpi">
+        <div class="kpi-num" id="kpiClean">0</div>
+        <div class="kpi-label">Limpios</div>
+      </div>
+      <div class="vt-kpi">
+        <div class="kpi-num" id="kpiSusp">0</div>
+        <div class="kpi-label">Sospechosos</div>
+      </div>
+
+      <div class="vt-chart">
+        <canvas id="vtChart" width="240" height="240" aria-label="Distribución de resultados" role="img"></canvas>
+      </div>
+    </div>
+
+    <div class="vt-card">
+      <h3>Resultados por motor (simulados)</h3>
+      <div class="table-scroll">
+        <table class="vt-table" id="engineTable">
+          <thead>
+            <tr>
+              <th>Motor</th>
+              <th>Resultado</th>
+              <th>Clasificación</th>
+              <th>Confianza</th>
+            </tr>
+          </thead>
+          <tbody><!-- filas generadas por JS --></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- =========================================================
+       MOCKUPS (galería)
+       ========================================================= -->
+  <section id="mockup-v1" class="mockup-section">
+    <h2>Mockups</h2>
+    <div class="mockup-gallery">
+      <figure class="mockup-card">
+        <img src="img/Mockup_1.png" alt="Mockup 1 – versión multi-dispositivo">
+      </figure>
+      <figure class="mockup-card">
+        <img src="img/Mockup_2.png" alt="Mockup 2 – laptop">
+      </figure>
+      <figure class="mockup-card wide">
+        <img src="img/Mockup_3.png" alt="Mockup 3 – móvil">
+      </figure>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       MARCO REFERENCIAL
+       ========================================================= -->
+  <section id="marco" class="marco-ref">
+    <h2>Marco Referencial</h2>
+    <p class="mr-sub">Resumen de conceptos, cifras y referentes que sustentan el proyecto.</p>
+
+    <div class="mr-grid">
+      <article class="mr-card">
+        <h3>Panorama global</h3>
+        <p>
+          La ciberseguridad crece por el aumento de <em>phishing</em>, <em>malware</em> y <em>ransomware</em>.
+          Reportes estiman que <strong>7 de cada 10 empresas</strong> han sido impactadas por algún ciberataque.
+        </p>
+      </article>
+
+      <article class="mr-card">
+        <h3>Distribución del gasto por regiones</h3>
+        <ul class="mr-list">
+          <li><span class="pill pct red">~10%</span> Latinoamérica (~9.7 %).</li>
+          <li><span class="pill pct blue">70%+</span> EE.UU. + Europa Occidental.</li>
+          <li><span class="pill pct violet">~20%</span> Asia–Pacífico, MEA y Oceanía.</li>
+        </ul>
+      </article>
+
+      <article class="mr-card">
+        <h3>Retos actuales</h3>
+        <ul class="mr-bullets">
+          <li>Dependencia de firmas estáticas.</li>
+          <li>Malware evasivo/fileless y falsos positivos.</li>
+          <li>Dificultad de integración en Pymes.</li>
+        </ul>
+      </article>
+
+      <article class="mr-card">
+        <h3>Por qué Sandboxing + Docker</h3>
+        <p>
+          El <strong>sandboxing</strong> permite observar comportamiento sin riesgo; <strong>Docker</strong> aporta
+          reproducibilidad, aislamiento y menor superficie de ataque.
+        </p>
+      </article>
+
+  
+      <aside class="mr-highlight mr-split">
+        <div class="mr-badge">Referente</div>
+
+        <div class="mr-col">
+          <h3>GrapheneOS (inspiración práctica)</h3>
+          <p>
+            Sistema orientado a seguridad con <strong>aislamiento extremo</strong> y endurecimiento del sistema.
+            Su modelo de <em>sandboxing</em> inspira nuestro enfoque con contenedores:
+          </p>
+          <ul class="mr-bullets tight">
+            <li>Aislamiento por app y políticas reforzadas (SELinux/mitigaciones).</li>
+            <li>Servicios sensibles como apps <em>totalmente sandboxed</em>.</li>
+            <li>Permisos granulares y <em>scopes</em> (red, sensores, contactos).</li>
+          </ul>
+          <small class="mr-note">Trasladamos esa filosofía a un marco docente con <strong>Docker + Sandboxing</strong>.</small>
+        </div>
+
+        <div class="mr-col media">
+          <div class="mr-yt">
+            <iframe
+              src="https://www.youtube.com/embed/k6yNQqnp3AA"
+              title="GrapheneOS demo"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <small class="mr-caption">Demo: aislamiento de apps en GrapheneOS → inspiración para <strong>Docker + Sandboxing</strong>.</small>
+        </div>
+      </aside>
+
+      <article class="mr-card mr-sources">
+        <h3>Fuentes</h3>
+        <ul class="mr-sources-list">
+          <li>Grand View Research (2025) — participación LATAM y crecimiento proyectado en ciberseguridad.</li>
+          <li>IDC (2025) — >70% del gasto en seguridad sigue concentrado en EE.UU. y Europa Occidental.</li>
+          <li>World Bank (2025) — incremento sostenido de incidentes cibernéticos en LATAM.</li>
+          <li>Comparitech (2025) — aumento global de ataques y fuerte impacto en usuarios, especialmente en ransomware.</li>
+          <li>Documentación oficial de GrapheneOS (2025) — nuevas versiones, mejoras y seguridad reforzada.</li>
+          <li>Barracuda Networks (2025) — Ransomware Insights Report: el 57% de las empresas encuestadas reportaron sufrir un ataque de ransomware en el último año.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <small>Proyecto Integrador • 2025 • MVP v1</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Simulador Sandboxing Adaptativo (Demo)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    .step { padding:10px; border:1px solid #ddd; margin:6px 0; border-radius:6px; }
+    .controls { margin-top:10px; }
+  </style>
+</head>
+<body>
+  <h1>Simulador Sandboxing Adaptativo (Demo)</h1>
+  <p>Simulación visual del aislamiento y análisis en contenedor (no ejecuta código).</p>
+  <div id="flow">
+    <div class="step" id="step-isolate">1. Aislamiento en contenedor</div>
+    <div class="step" id="step-runtime">2. Análisis en tiempo de ejecución</div>
+    <div class="step" id="step-report">3. Generación de informe</div>
+  </div>
+  <div class="controls">
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+  </div>
+  <div id="log" style="margin-top:12px;"></div>
+  <script>
+    let paused=false;
+    let current=0;
+    const steps=['step-isolate','step-runtime','step-report'];
+    const log = document.getElementById('log');
+    function highlight(i){
+      steps.forEach((id,idx)=>{
+        const el=document.getElementById(id);
+        if(idx===i) el.style.background='#eef';
+        else el.style.background='';
+      });
+    }
+    let timer=null;
+    function run(){
+      if(current>=steps.length){ log.innerText='Simulación completada.'; return; }
+      highlight(current);
+      log.innerText='Ejecutando: '+current;
+      current++;
+      timer = setTimeout(()=>{ if(!paused) run(); }, 900);
+    }
+    document.getElementById('start').addEventListener('click', ()=>{ paused=false; if(!timer) run(); });
+    document.getElementById('pause').addEventListener('click', ()=>{ paused=true; clearTimeout(timer); timer=null; });
+    document.getElementById('reset').addEventListener('click', ()=>{ paused=false; clearTimeout(timer); timer=null; current=0; highlight(-1); log.innerText='Reiniciado.'; });
+  </script>
+</body>
+</html>
